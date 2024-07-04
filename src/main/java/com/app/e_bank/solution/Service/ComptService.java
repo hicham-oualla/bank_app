@@ -37,4 +37,8 @@ public class ComptService {
     public void deletecompt(Integer id) {
         comptRepository.deleteById(id);
     }
+    public Float getSoldById(Integer id) {
+        Compt compt = comptRepository.findById(id).orElse(null);
+        return (compt != null) ? compt.getSold() : null;
+    }
 }

@@ -17,6 +17,7 @@ public class ComptController {
     public List<Compt> getCompts() {
         return comptService.getAllcompt();
     }
+
     @GetMapping("/{id}")
     public Compt getCompt(@PathVariable Integer id) {
         return comptService.getcomptbyid(id);
@@ -29,4 +30,15 @@ public class ComptController {
                 comptService.creatcompt(id_Utilisateur, type_Compt, sold);
         return "saved";
     }
+
+    @DeleteMapping("/{id}")
+    public String deleteCompt(@PathVariable Integer id) {
+        comptService.deletecompt(id);
+        return "deleted";
+    }
+    @GetMapping("/{id}/sold")
+    public Float getComptSold(@PathVariable Integer id) {
+        return comptService.getSoldById(id);
+    }
+
 }
