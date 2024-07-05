@@ -25,10 +25,10 @@ public class ComptController {
     }
 
     @PostMapping("/add")
-    public String addCompt(@RequestParam Integer id_Utilisateur, @RequestParam String type_Compt, @RequestParam float sold) {
+    public Compt addCompt(@RequestBody Compt compt){
 
-                comptService.creatcompt(id_Utilisateur, type_Compt, sold);
-        return "saved";
+
+        return  comptService.creatcompt(compt);
     }
 
     @DeleteMapping("/{id}")

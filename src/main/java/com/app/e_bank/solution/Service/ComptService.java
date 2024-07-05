@@ -16,13 +16,14 @@ public class ComptService {
 
     @Autowired
     private UserRepository userRepository;
+    private UserService userService;
 
-    public Compt creatcompt(Integer id_Utilisateur, String type_Compt, float sold) {
+    public Compt creatcompt(Compt compte) {
         Compt compt = new Compt();
-        compt.setType_compt(type_Compt);
-        compt.setSold(sold);
+        compt.setType_compt(compte.getType_compt());
+        compt.setSold(compte.getSold());
         compt.setDate_creation(LocalDate.now());
-        compt.setUtilisateur(userRepository.getReferenceById(id_Utilisateur));
+        compt.setUtilisateur(compte.getUtilisateur());
         return comptRepository.save(compt);
     }
 
@@ -41,4 +42,6 @@ public class ComptService {
         Compt compt = comptRepository.findById(id).orElse(null);
         return (compt != null) ? compt.getSold() : null;
     }
+
+
 }
