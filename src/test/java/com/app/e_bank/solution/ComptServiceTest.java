@@ -1,9 +1,10 @@
-package com.app.e_bank.solution.Service;
+package com.app.e_bank.solution;
 
 import com.app.e_bank.solution.Model.Compt;
 import com.app.e_bank.solution.Model.Utilisateur;
 import com.app.e_bank.solution.Repository.ComptRepository;
 import com.app.e_bank.solution.Repository.UserRepository;
+import com.app.e_bank.solution.Service.ComptService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
