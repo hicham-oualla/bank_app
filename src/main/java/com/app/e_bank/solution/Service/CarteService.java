@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CarteService {
@@ -56,5 +57,4 @@ public class CarteService {
             carte.setActive(false);
             carteRepository.save(carte);
         }
-    }
-}
+    }}
