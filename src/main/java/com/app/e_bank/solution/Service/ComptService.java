@@ -42,6 +42,10 @@ public class ComptService {
         Compt compt = comptRepository.findById(id).orElse(null);
         return (compt != null) ? compt.getSold() : null;
     }
-
+//    public double getTotalSold() {
+//        return comptRepository.findAll().stream()
+//                .mapToDouble(Compt::getSold)
+//                .sum();
+//    }
 
 }

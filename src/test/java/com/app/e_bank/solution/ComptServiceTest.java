@@ -42,8 +42,8 @@ public class ComptServiceTest {
     @Test
     void testCreatCompt() {
         Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId_user(1);
-        utilisateur.setFullname_user("John Doe");
+        utilisateur.setId(1);
+        utilisateur.setUsername("John Doe");
 
         Compt compte = new Compt();
         compte.setType_compt("Savings");
